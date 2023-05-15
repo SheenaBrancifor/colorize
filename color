@@ -1,0 +1,21 @@
+require 'colorize'
+
+# Функция для отображения анимации
+def animate_text(text)
+  colors = [:red, :yellow, :green, :blue, :magenta]
+  text.chars.each do |char|
+    color = colors.sample
+    print char.send(color)
+    sleep(0.1)
+  end
+  puts "\n"
+end
+
+# Анимированное приветствие
+greeting = "Привет, мир!"
+animate_text(greeting)
+
+# Анимированное отображение чисел от 1 до 10
+(1..10).each do |num|
+  animate_text(num.to_s)
+end
